@@ -4,7 +4,7 @@ export class Transaction {
   debit: number;
   balance: number;
 
-  constructor(credit, debit, balance) {
+  constructor(credit: number, debit: number, balance: number) {
     this.date = new Date();
     this.credit = credit;
     this.debit = debit;

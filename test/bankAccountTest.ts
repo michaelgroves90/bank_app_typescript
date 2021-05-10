@@ -47,11 +47,11 @@ describe('Bank Account', () => {
       "balance": 10,
       "credit": 10,
       "date": bankAccount.transaction_history[0].date,
-      "debit": ""
+      "debit": 0
       },
       {
       "balance": 5,
-      "credit": "",
+      "credit": 0,
       "date": bankAccount.transaction_history[1].date,
       "debit": 5
       }]);
