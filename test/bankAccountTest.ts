@@ -1,6 +1,6 @@
 import { BankAccount } from "../src/bankAccount";
 import { Transaction } from "../src/transaction";
-import { expect } from 'chai';
+import { assert, expect } from 'chai';
 
 describe('Bank Account', () => {
   let bankAccount;
@@ -23,6 +23,13 @@ describe('Bank Account', () => {
     bankAccount.withdraw(5);
     expect(bankAccount.balance).to.equal(5);
   });
+
+  it('Withdrawals cannot be made past 0', () => {
+    bankAccount.deposit(10);
+    expect(function() {
+      bankAccount.withdraw(11)
+    }).to.throw(`Cannot Withdraw, Balance is ${bankAccount.balance}`);
+  });  
 
   it('Stores transaction data in transaction history', () => {
     bankAccount.deposit(10);
