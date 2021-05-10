@@ -24,4 +24,8 @@ export class BankAccount {
     this.transaction_history.push(transaction);
   };
 
+  printStatement() {
+    return this.transaction_history;
+  }
+
 }

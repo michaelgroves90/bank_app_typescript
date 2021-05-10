@@ -39,4 +39,22 @@ describe('Bank Account', () => {
     expect(bankAccount.transaction_history[1].debit).to.equal(5);
   });
 
+  it('Prints an account statement', () => {
+    bankAccount.deposit(10);
+    bankAccount.withdraw(5);
+    expect(bankAccount.printStatement()).to.eql([
+      {
+      "balance": 10,
+      "credit": 10,
+      "date": bankAccount.transaction_history[0].date,
+      "debit": ""
+      },
+      {
+      "balance": 5,
+      "credit": "",
+      "date": bankAccount.transaction_history[1].date,
+      "debit": 5
+      }]);
+  });
+
 });
