@@ -5,4 +5,8 @@ export class BankAccount {
     this.balance = 0;
   }
 
+  deposit(n: number): void {
+    this.balance += n;
+  }
+
 }
