@@ -9,4 +9,8 @@ export class BankAccount {
     this.balance += n;
   }
 
+  withdraw(n: number): void {
+    this.balance -= n;
+  }
+
 }
