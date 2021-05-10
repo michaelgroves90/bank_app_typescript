@@ -1,6 +1,6 @@
 import { BankAccount } from "../src/bankAccount";
-import { Transaction } from "../src/transaction";
-import { assert, expect } from 'chai';
+// import { Transaction } from "../src/transaction";
+import { expect } from 'chai';
 
 describe('Bank Account', () => {
   let bankAccount;
